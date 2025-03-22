@@ -16,7 +16,6 @@ fun main() {
     var opcao: Int
 
     do {
-        // Exibe o menu
         println("\n--- Menu ---")
         println("1. Cadastrar 15 pessoas")
         println("2. Mostrar pessoas com altura <= 1.5m")
@@ -39,7 +38,6 @@ fun main() {
     } while (opcao != 6)
 }
 
-// Função para cadastrar 15 pessoas
 fun cadastrarPessoas(): List<Pessoa> {
     val pessoas = mutableListOf<Pessoa>()
     for (i in 1..15) {
@@ -54,7 +52,6 @@ fun cadastrarPessoas(): List<Pessoa> {
     return pessoas
 }
 
-// Função para mostrar pessoas com base na altura
 fun mostrarPessoasPorAltura(pessoas: List<Pessoa>, alturaMin: Double, alturaMax: Double) {
     val filtradas = pessoas.filter { it.altura > alturaMin && it.altura <= alturaMax }
     if (filtradas.isEmpty()) {
@@ -65,7 +62,6 @@ fun mostrarPessoasPorAltura(pessoas: List<Pessoa>, alturaMin: Double, alturaMax:
     }
 }
 
-// Função para calcular a média das alturas
 fun calcularMediaAlturas(pessoas: List<Pessoa>) {
     if (pessoas.isEmpty()) {
         println("Nenhuma pessoa cadastrada.")
