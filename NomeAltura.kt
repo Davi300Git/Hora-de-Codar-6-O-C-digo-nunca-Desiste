@@ -14,16 +14,16 @@ data class Pessoa(val nome: String, val altura: Double)
 fun main() {
     val listaPessoas = mutableListOf<Pessoa>()
     var opcao: Int
-
     do {
-        println("\n--- Menu ---")
-        println("1. Cadastrar 15 pessoas")
-        println("2. Mostrar pessoas com altura <= 1.5m")
-        println("3. Mostrar pessoas com altura > 1.5m")
-        println("4. Mostrar pessoas com altura > 1.5m e < 2.0m")
-        println("5. Calcular média das alturas")
-        println("6. Sair")
-        print("Escolha uma opção: ")
+        print("""
+            --- Menu ---
+            1. Cadastrar 15 pessoas
+            2. Mostrar pessoas com altura <= 1.5m
+            3. Mostrar pessoas com altura > 1.5m
+            4. Mostrar pessoas com altura > 1.5m e < 2.0m
+            5. Calcular média das alturas
+            6. Sair
+            Escolha uma opção: """.trimIndent())
         opcao = readLine()?.toIntOrNull() ?: 0
 
         when (opcao) {
